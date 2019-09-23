@@ -8,8 +8,8 @@ RSpec.describe Article, type: :model do
   end
 
   describe 'Validates attributes' do
-    it {is_expected.to vaildate_presence_of :title}
-    it {is_expected.to vaildate_presence_of :content}
+    it {is_expected.to validate_presence_of :title}
+    it {is_expected.to validate_presence_of :content}
   end
 
   describe 'Factory' do
