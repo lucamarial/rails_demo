@@ -7,7 +7,7 @@ Then("I should see {string}") do |content|
 end
 
 Given("the following articles exists") do |table|
- table.hashes.each do |article|
-  Article.create!(article)
+ table.hashes.each do |hash|
+  Article.create!(hash)
  end
 end
