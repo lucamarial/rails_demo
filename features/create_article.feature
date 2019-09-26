@@ -1,15 +1,10 @@
-As a publisher
-In order to add relevant content to my news service
-I would like to be able to create articles
-Here is a starting feature file for the create functionallity.
-
-Fearture: Create articles
+Feature: Create articles
   As a publisher
   In order to add relevant content to my news service
-  I would loke to be able to create articles
+  I would like to be able to create articles
 
   Background:
-    Given I visit the "landing" page
+    Given I visit the landing page
     When I click "New Article" link
 
   Scenario: Successfully create an article [Happy Path]
