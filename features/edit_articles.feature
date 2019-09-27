@@ -11,13 +11,12 @@ Feature: Edit my articles
     And I visit the landing page
 
   Scenario: User can edit his articles
-    When I click on "Edit"
+    When I click "Edit" button
     Then I should be on "Die Wiesn" page
     And I fill in "title" with "changes"
     And I fill in "content" with "das ist gut"
     And I should see "Article was successfully created"
     And I should see "changes"
-    And I should 
 
 
 
