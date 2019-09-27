@@ -14,7 +14,7 @@ Feature: Create articles
     Then I should be on "Learning Rails 5" page
     And I should see "Article was successfully created."
     And I should see "Learning Rails 5"
-    And I sould see "Excited about learning a new framework"
+    And I should see "Excited about learning a new framework"
 
   Scenario: Publisher doesn't enter a title for the article [Sad Path]
     When I fill in "Content" with "Excited about learning a new framework"

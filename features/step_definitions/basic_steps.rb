@@ -15,13 +15,10 @@ When("I click {string} button") do |string|
 end
 
 Then("I should be on {string} page") do |string|
-  visit current_path
+  article = Article.find_by(title: string)
+  expect(current_path).to eq article_path(article)
 end
 
 Then("I should see {string}") do |string|
-  document(page).to have_content string
-end
-
-Then("I sould see {string}") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(page).to have_content string
 end
