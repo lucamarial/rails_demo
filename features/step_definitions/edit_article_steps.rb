@@ -4,3 +4,8 @@ Given("the following article exists") do |table|
   end
 end
 
+Then("I visit the {string} page") do |string|
+  visit edit_article_path(:id)
+end
+
+
