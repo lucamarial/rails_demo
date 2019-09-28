@@ -22,3 +22,15 @@ end
 Then("I should see {string}") do |string|
   expect(page).to have_content string
 end
+
+Given("I am on the {string} page") do |string|
+  visit new_user_session_path
+end
+
+Then("I should be on the {string} page") do |string|
+  visit new_user_registration_path
+end
+
+
+
+
