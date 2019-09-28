@@ -4,7 +4,10 @@ Feature: User sign up
   I would like to create an account.
 
   Background:
-  Given I am on the "sign in" page
+  Given following user exist
+    | email        | password |
+    | du@email.de | password |
+  And I am on the "sign in" page
   And I click "Sign up" button
   Then I should be on the "sign up" page
 
@@ -33,3 +36,10 @@ Feature: User sign up
     And I fill in "Password" with "passwords"
     And I click "Sign up" button
     Then I should see "Password confirmation doesn't match Password"
+
+  Scenario: User can't sign up with used email
+    When I fill in "Email" with "du@email.de"
+    And I fill in "Password" with "password"
+    And I fill in "Password" with "password"
+    And I click "Sign up" button
+    Then I should see "Email has already been taken"
