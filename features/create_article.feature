@@ -4,7 +4,11 @@ Feature: Create articles
   I would like to be able to create articles
 
   Background:
-    Given I visit the landing page
+    Given following user exist
+      | email        | password |
+      | du@email.de  | password |
+    And I am logged in as "du@email.de"
+    And I visit the landing page
     When I click "New Article" link
 
   Scenario: Successfully create an article [Happy Path]

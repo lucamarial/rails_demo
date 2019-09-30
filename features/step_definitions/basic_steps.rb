@@ -31,6 +31,11 @@ Then("I should be on the {string} page") do |string|
   visit new_user_registration_path
 end
 
+Given("I am logged in as {string}") do |string|
+  user = User.find_by(email: string)
+  login_as(user, scope: :user)
+end
+
 
 
 
