@@ -16,12 +16,10 @@ Feature: Edit my articles
 
   Scenario: User can edit his articles
     When I click "Edit" button
-    Then I visit the "edit" page
-    #Then I should see "Update Article"
-    And I fill in "title" with "changes"
-    And I fill in "content" with "das ist gut"
+    Then I fill in "Title" with "changes"
+    And I fill in "Content" with "das ist gut"
+    And I click "Update Article" button
     Then I should be on "changes" page
-    And I should see "Article was successfully created"
     And I should see "changes"
 
 
