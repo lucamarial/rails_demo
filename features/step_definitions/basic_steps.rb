@@ -36,6 +36,11 @@ Given("I am logged in as {string}") do |string|
   login_as(user, scope: :user)
 end
 
+Then("I should not see {string}") do |string|
+  expect(page).not_to have_content string
+end
+
+
 
 
 
