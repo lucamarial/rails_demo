@@ -15,4 +15,13 @@
 
 <%= link_to 'New Article', new_article_path %>
 
+<ul>
+  <% @authors.each do |author|%>
+    <li>
+      <%= author.name %><br />
+      <%= author.genre %><br />
+    </li>
+  <% end %>
+</ul>
+
 

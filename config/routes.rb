@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :articles
   resources :users
+  resources :authors
 
   root controller: :landing, action: :index
 end
