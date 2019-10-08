@@ -40,6 +40,13 @@ Then("I should not see {string}") do |string|
   expect(page).not_to have_content string
 end
 
+Given("following authors exist") do |table|
+  table.hashes.each do |author_hash|
+    FactoryBot.create(:author, author_hash)
+  end
+end
+
+
 
 
 
